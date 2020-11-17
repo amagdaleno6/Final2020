@@ -53,14 +53,14 @@ fisher.test(table1)
 ```
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
-# Results for Guys
+# Results for Males
 
 ```{r}
 dataM<-filter(FinalData,sex=="guy")
 
 ```
 
-## Graphical Results for Guys
+## Graphical Results for Males
 
 ```{r}
 barchartGC(~infected + treatment,data=dataM)
@@ -68,7 +68,7 @@ barchartGC(~infected + treatment,data=dataM, type="percent")
 
 ```
 
-## Numerical Results for Guys
+## Numerical Results for Males
 
 ```{r}
 table1 <- xtabs(~infected + treatment,data=dataM)
@@ -76,7 +76,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-## Inferential Results for Guys
+## Inferential Results for Males
 
 ```{r}
 chisq.test(table1)
