@@ -27,6 +27,8 @@ dataF<-filter(FinalData,sex=="gal")
 
 ```
 
+## Graphical Results for Females
+
 ```{r}
 barchartGC(~infected + treatment,data=dataF)
 barchartGC(~infected + treatment,data=dataF, type="percent")
@@ -60,9 +62,27 @@ dataM<-filter(FinalData,sex=="guy")
 
 ## Graphical Results for Guys
 
+```{r}
+barchartGC(~infected + treatment,data=dataM)
+barchartGC(~infected + treatment,data=dataM, type="percent")
+
+```
+
 ## Numerical Results for Guys
 
+```{r}
+table1 <- xtabs(~infected + treatment,data=dataM)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferential Results for Guys
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Results for LGBTQ
 
@@ -73,9 +93,27 @@ dataQ<-filter(FinalData,LGBTQ=="gay")
 
 ## Graphical Results for LGBTQ
 
+```{r}
+barchartGC(~infected + treatment,data=dataQ)
+barchartGC(~infected + treatment,data=dataQ, type="percent")
+
+```
+
 ## Numerial Results for LGBTQ
 
+```{r}
+table1 <- xtabs(~infected + treatment,data=dataQ)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferential Results for LGBTQ
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Results for Drug Users
 
@@ -86,9 +124,27 @@ dataD<-filter(FinalData,DrugUser=="yes")
 
 ## Graphical results for Drug users
 
+```{r}
+barchartGC(~infected + treatment,data=dataD)
+barchartGC(~infected + treatment,data=dataD, type="percent")
+
+```
+
 ## Numerial Results for Drug users
 
+```{r}
+table1 <- xtabs(~infected + treatment,data=dataD)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Inferential Results for Drug users
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
