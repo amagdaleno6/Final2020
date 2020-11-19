@@ -1,7 +1,7 @@
 ---
 title: "Covid91 vaccine study Final2020"
 author: "Alejandra Magdaleno!"
-date: "November 2020"
+date: "November 21, 2020"
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ FinalData <- OldData %>% mutate(infected = recode(infected, aids = "covid", none
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
-A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
+A new  preventative vaccine (covid91) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of sub-populations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine.
 
 # Females
 
@@ -35,6 +35,8 @@ barchartGC(~infected + treatment,data=dataF, type="percent")
 
 ```
 
+The graphical results show that from the females that got COVID, about twice as many took the placebo than those who took the drug. For those that did not get COVID.  The amount of females who took the drug vs the ones that took the placebo is about the same.  
+
 ## Numerical Results for Females
 
 ```{r}
@@ -42,6 +44,9 @@ table1 <- xtabs(~infected + treatment,data=dataF)
 rowPerc(table1)
 colPerc(table1)
 ```
+
+The numerical results show that of the female population, of those that got COVID, 33.11% took the drug while 66.89 took the placebo. Of those females that did not get COVID, 50.31 took the drug, while 49.69 took a placebo.  
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 ## Inferential Results for Females
@@ -51,6 +56,9 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between .41 and .58 with an odds ratio of 1 to .49. 
+
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 # Results for Males
@@ -68,6 +76,8 @@ barchartGC(~infected + treatment,data=dataM, type="percent")
 
 ```
 
+The graphical results show that from the Males that got COVID, about 58% percent took the drug compared to about 42% that took the placebo.   For those Males that did not get COVID, about 48% took the drug and 52% took the placebo.
+
 ## Numerical Results for Males
 
 ```{r}
@@ -76,6 +86,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical results show that of the Males who got COVID, 58.16 took the drug while 41.84 tooko the placebo.  Of those that did not get COVID, 48.54 took the drug, while 51.46 took the placebo.
+
 ## Inferential Results for Males
 
 ```{r}
@@ -83,6 +95,8 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between 1.18 and 1.85 with an odds ratio of 1 to 1.47. 
 
 # Results for LGBTQ
 
@@ -99,6 +113,8 @@ barchartGC(~infected + treatment,data=dataQ, type="percent")
 
 ```
 
+The graphical results shows that out of the LGBTQ who got COVID, about 70% took the drug while 30% took the placebo.  Of those that did not get COVID, about 50% took the drug while the other 50% took the placebo.  
+
 ## Numerial Results for LGBTQ
 
 ```{r}
@@ -107,6 +123,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+The numerical results for LGBTQ show that of those who got COVID, 70.69 took the drug while 29.31 took the placebo.  Of those that did not get COVID, 49.17 took the drug while 50.83 took the placebo.  
+
 ## Inferential Results for LGBTQ
 
 ```{r}
@@ -114,6 +132,8 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between 1.63 and 3.87.  The odds ratio is 1:2.49.
 
 # Results for Drug Users
 
@@ -130,6 +150,8 @@ barchartGC(~infected + treatment,data=dataD, type="percent")
 
 ```
 
+The graphical description show that for the drug users that got COVID, about 35% took the drug while 65% took the placebo.  Of those that did not get COVID, about 47% took the drug while 53% took the placebo.  
+
 ## Numerial Results for Drug users
 
 ```{r}
@@ -137,7 +159,7 @@ table1 <- xtabs(~infected + treatment,data=dataD)
 rowPerc(table1)
 colPerc(table1)
 ```
-
+The numerical results shows that for the drug users who got COVID, 33.33 took the drug while 66.67 took the placebo.  Of those that did not get COVID, 47.83 got the drug while 52.17 got the placebo.  
 ## Inferential Results for Drug users
 
 ```{r}
@@ -145,6 +167,8 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+
+The Fisher's Exact test shows that the value of p is under .05.  The 95 percent confidence interval is between 1.63 and 3.87.  The odds ratio is 1:2.49
 
 # Discussion and Conclusion
 
