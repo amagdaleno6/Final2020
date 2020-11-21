@@ -35,7 +35,7 @@ barchartGC(~infected + treatment,data=dataF, type="percent")
 
 ```
 
-The graphical results show that from the females that got COVID, about twice as many took the placebo than those who took the drug. For those that did not get COVID.  The amount of females who took the drug vs the ones that took the placebo is about the same.  
+The graph shows that from the females that got COVID, about 35% took the drug while 65% took the placebo.  This shows that the drug seems to be effective for women. For those women that were not infected, the amount who took the drug was about the same than those who took the placebo.  
 
 ## Numerical Results for Females
 
@@ -45,7 +45,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results show that of the female population, of those that got COVID, 33.11% took the drug while 66.89 took the placebo. Of those females that did not get COVID, 50.31 took the drug, while 49.69 took a placebo.  
+The numerical results show that of the female population who were infected, 33.11% took the drug while 66.89% took the placebo. Of the females that did not get COVID, 50.31% took the drug, while 49.69% took a placebo.  This supports our observations of the graph that the drug is working for women.   
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
@@ -57,7 +57,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between .41 and .58 with an odds ratio of 1 to .49. 
+The Fisher's Exact Test shows a very small value for P.  The 95% confidence interval is between .41 and .58.  The odds ratio is .49:1.  This means females who took the drug are about 50% less likely to get infected than those who took the placebo.   
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
@@ -76,7 +76,7 @@ barchartGC(~infected + treatment,data=dataM, type="percent")
 
 ```
 
-The graphical results show that from the Males that got COVID, about 58% percent took the drug compared to about 42% that took the placebo.   For those Males that did not get COVID, about 48% took the drug and 52% took the placebo.
+This bargraph show that from the Males that got COVID, about 58% percent took the drug compared to about 42% that took the placebo. This means that the drug does not seem to be effective in preventing males from getting infected.  For those Males that did not get COVID, about 48% took the drug and 52% took the placebo.
 
 ## Numerical Results for Males
 
@@ -86,7 +86,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results show that of the Males who got COVID, 58.16 took the drug while 41.84 tooko the placebo.  Of those that did not get COVID, 48.54 took the drug, while 51.46 took the placebo.
+The numerical results show that of the Males who got COVID, 58.16% took the drug while 41.84% took the placebo.  Of those that did not get COVID, 48.54% took the drug, while 51.46% took the placebo. This supports our observations from that graph the drug is not effective in preventing males from getting infected. 
 
 ## Inferential Results for Males
 
@@ -96,7 +96,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between 1.18 and 1.85 with an odds ratio of 1 to 1.47. 
+The Fisher's exact test shows a p value of 0.0005801.  The 95% confidence interval is between 1.18 and 1.85.  The odds ratio fo 1.47 shows that men are about 1.5 more likely to get infected by taking the drug than those who took the placebo.
 
 # Results for LGBTQ
 
@@ -113,7 +113,7 @@ barchartGC(~infected + treatment,data=dataQ, type="percent")
 
 ```
 
-The graphical results shows that out of the LGBTQ who got COVID, about 70% took the drug while 30% took the placebo.  Of those that did not get COVID, about 50% took the drug while the other 50% took the placebo.  
+The graph shows that out of the LGBTQ who got COVID, about 70% took the drug while 30% took the placebo. This shows that the drug is not effective in preventing LGBTQ from getting infected. Of those that did not get COVID, about 49% took the drug and 51% took the placebo.  
 
 ## Numerial Results for LGBTQ
 
@@ -123,7 +123,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The numerical results for LGBTQ show that of those who got COVID, 70.69 took the drug while 29.31 took the placebo.  Of those that did not get COVID, 49.17 took the drug while 50.83 took the placebo.  
+The numerical results for LGBTQ show that of those who got COVID, 70.69% took the drug while 29.31% took the placebo.  Of those that did not get COVID, 49.17% took the drug while 50.83% took the placebo.  This supports our observation from the graphical results that the drug is not effective for the LGBTQ community.   
 
 ## Inferential Results for LGBTQ
 
@@ -133,7 +133,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The inferential results from the Fisher's exact test shows a p value under .05.  The 95% confidence interval is between 1.63 and 3.87.  The odds ratio is 1:2.49.
+The Fisher's exact test shows a p value of 0.000005741.  The 95% confidence interval is between 1.63 and 3.87.  The odds ratio of 2.49:1 shows that for a member of the LGBTQ community, the odds of getting infected are about 2.5 higher by taking the drug than by taking the placebo. 
 
 # Results for Drug Users
 
@@ -150,7 +150,7 @@ barchartGC(~infected + treatment,data=dataD, type="percent")
 
 ```
 
-The graphical description show that for the drug users that got COVID, about 35% took the drug while 65% took the placebo.  Of those that did not get COVID, about 47% took the drug while 53% took the placebo.  
+The graph reflects that for the drug users that got COVID, about 35% took the drug while 65% took the placebo. This shows that the drug seems to be working for the drug users. Of those that did not get COVID, about 47% took the drug while 53% took the placebo.  
 
 ## Numerial Results for Drug users
 
@@ -159,7 +159,8 @@ table1 <- xtabs(~infected + treatment,data=dataD)
 rowPerc(table1)
 colPerc(table1)
 ```
-The numerical results shows that for the drug users who got COVID, 33.33 took the drug while 66.67 took the placebo.  Of those that did not get COVID, 47.83 got the drug while 52.17 got the placebo.  
+The numerical results shows that for the drug users who got COVID, 33.33% took the drug while 66.67% took the placebo.  Of those that did not get COVID, 47.83% got the drug while 52.17% got the placebo.  This supports our observations that the drug is working for the drug users in preventing infection. 
+
 ## Inferential Results for Drug users
 
 ```{r}
@@ -168,10 +169,16 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher's Exact test shows that the value of p is under .05.  The 95 percent confidence interval is between 1.63 and 3.87.  The odds ratio is 1:2.49
+The Fisher's Exact test shows that the value of p to be 0.002273.  The 95% confidence interval is between .36 and .82.  The odds ratio of .55:1 means that for drug users, they are 55% less likely to get infected by taking the drug than those who took the placebo. 
 
 # Discussion and Conclusion
 
-recommendations on what group the drug will help/not 
+If you are a Female, I would recommend that you take the drug to prevent getting infected.  By taking the drug, you are about 50% less likely to get infected than if you take the placebo.
+
+If you are a Male, I would not recommend for you to take the drug. By taking the drug, you are about 1.5 times more likely to get infected than by taking the placebo. 
+
+If you are in the LGBTQ, I would not recommend that you take the drug.  By taking the drug, you are about 2.5 times more likely to get infected than by taking the placebo.
+
+Lastly, if you are a drug user, I would recommend that you take the drug.  By taking the drug, you are about 55% less likely to get infected than by taking the placebo.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
