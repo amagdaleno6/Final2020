@@ -35,7 +35,7 @@ barchartGC(~infected + treatment,data=dataF, type="percent")
 
 ```
 
-The graph shows that from the females that got COVID, about 35% took the drug while 65% took the placebo.  This shows that the drug seems to be effective for women. For those women that were not infected, the amount who took the drug was about the same than those who took the placebo.  
+The graph shows that from the females that got COVID, about 35% took the drug while 65% took the placebo.  This shows that the drug seems to be effective for women. For those women that were not infected, the amount who took the drug was about the same than those who took the placebo.   
 
 ## Numerical Results for Females
 
@@ -57,7 +57,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher's Exact Test shows a very small value for P.  The 95% confidence interval is between .41 and .58.  The odds ratio is .49:1.  This means females who took the drug are about 50% less likely to get infected than those who took the placebo.   
+The Fisher's Exact Test shows a very small value for P.  The 95% confidence interval is between .40 and .58.  The odds ratio is .49:1.  This means females who took the drug are about 50% less likely to get infected than those who took the placebo.  This means that the drug is working for the females. I would recommend this drug for the females.      
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
@@ -96,7 +96,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher's exact test shows a p value of 0.0005801.  The 95% confidence interval is between 1.18 and 1.85.  The odds ratio fo 1.47 shows that men are about 1.5 more likely to get infected by taking the drug than those who took the placebo.
+The Fisher's exact test shows a p value of 0.0005801.  The 95% confidence interval is between 1.17 and 1.84.  The odds ratio of 1.47 shows that men are about 1.5 more likely to get infected by taking the drug than those who took the placebo. This means that the drug is not working for the men.  They are about one and a half times more likely to get COVID by taking the drug.  I would not recommend them taking the drug.  
 
 # Results for LGBTQ
 
@@ -133,7 +133,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher's exact test shows a p value of 0.000005741.  The 95% confidence interval is between 1.63 and 3.87.  The odds ratio of 2.49:1 shows that for a member of the LGBTQ community, the odds of getting infected are about 2.5 higher by taking the drug than by taking the placebo. 
+The Fisher's exact test shows a p value of 0.000005741.  The 95% confidence interval is between 1.63 and 3.87.  The odds ratio of 2.49:1 shows that for a member of the LGBTQ community, the odds of getting infected are about 2.5 times higher by taking the drug than by taking the placebo.  This mean that the drug is absolutely not working. The chances of getting COVID are multiplied by two and a half times when taking the drug than by not taking the drug. Recommendation would be to not take the drug.  
 
 # Results for Drug Users
 
@@ -169,7 +169,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher's Exact test shows that the value of p to be 0.002273.  The 95% confidence interval is between .36 and .82.  The odds ratio of .55:1 means that for drug users, they are 55% less likely to get infected by taking the drug than those who took the placebo. 
+The Fisher's Exact test shows that the value of p to be 0.002273.  The 95% confidence interval is between .35 and .81.  The odds ratio of .55:1 means that for drug users, they are 55% less likely to get infected by taking the drug than those who took the placebo.  This means the drug is working and is decreasing the chances of them getting COVID by a little more than half.  My recommendation would be to take the drug.    
 
 # Discussion and Conclusion
 
@@ -177,7 +177,7 @@ If you are a Female, I would recommend that you take the drug to prevent getting
 
 If you are a Male, I would not recommend for you to take the drug. By taking the drug, you are about 1.5 times more likely to get infected than by taking the placebo. 
 
-If you are in the LGBTQ, I would not recommend that you take the drug.  By taking the drug, you are about 2.5 times more likely to get infected than by taking the placebo.
+If you are a member of the LGBTQ, I would not recommend that you take the drug.  By taking the drug, you are about 2.5 times more likely to get infected than by taking the placebo.
 
 Lastly, if you are a drug user, I would recommend that you take the drug.  By taking the drug, you are about 55% less likely to get infected than by taking the placebo.
 
